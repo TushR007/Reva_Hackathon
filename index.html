@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <Header>
+        <h1>Your To-Do List</h1>
+    </Header>
+
+    <form>
+        <input type="text" class = "to-doinput" placeholder="Task to be done..." />
+        <button type = "submit" class = "to-dobutton">
+            <i class="fas fa-plus-circle"></i>
+        </button>
+        <div class = "select">
+            <select name = "todos" class = "filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+        </div>
+        <div id="main_container" class = "maincontainer" style="display:none;">
+            <button class = "logout" onclick="mainApp.logout();">Log out</button>
+        </div>>
+        
+    </form>
+    <div class = "to-docontainer">
+        <ul class = "to-dolist"></ul>
+    </div>
+    <script src="fireBase.js"></script>
+    <script src = "app.js"> </script>
+</body>
+</html>
